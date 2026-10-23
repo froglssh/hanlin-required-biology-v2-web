@@ -32,14 +32,3 @@
   lb.addEventListener('click', function (e) { if (e.target !== img) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) close(); });
 })();
-
-// 本機電腦模式偵測 (file: 協定)
-if (window.location.protocol === 'file:') {
-  document.documentElement.classList.add('local-mode');
-  document.querySelectorAll('a[data-local]').forEach(function(el) {
-    var lp = el.getAttribute('data-local');
-    if (lp) {
-      el.setAttribute('href', lp);
-    }
-  });
-}
