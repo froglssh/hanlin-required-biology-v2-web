@@ -238,3 +238,13 @@ a{color:inherit}
 }
 .lab-grid.two{grid-template-columns:repeat(2,minmax(0,440px));justify-content:center}
 @media (max-width:760px){.lab-grid.two{grid-template-columns:1fr}}
+
+/* 電腦與線上雙連結按鈕群組 */
+.btn-group{display:inline-flex;flex-wrap:wrap;gap:10px;margin-top:auto;align-self:flex-start}
+.btn.btn-local{background:#fff;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+.btn.btn-local:hover{border-color:var(--a);color:var(--a);background:color-mix(in srgb,var(--a) 10%,#fff);transform:translateY(-2px);box-shadow:0 10px 20px -10px var(--a)}
+.local-badge{display:none;align-items:center;gap:6px;font-size:13px;padding:4px 12px;border-radius:99px;background:#e6f4ea;color:#137333;font-weight:700;margin-left:auto}
+.local-mode .local-badge{display:inline-flex}
+@media (max-width:760px){
+  .btn-group{align-self:stretch;flex-direction:column}
+}
